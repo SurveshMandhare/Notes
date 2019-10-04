@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Notes</string>
+    <string name="navigation">Navigation</string>
+    <string name="noteHint">Note it here...</string>
+    <string name="topic">Topic</string>
+    <string name="switchText">Remind Me</string>
+    <string name="searchText">..Search..</string>
+</resources>
