@@ -5,5 +5,5 @@
     <color name="colorAccent">#D81B60</color>
     <color name="cancel">#D63031</color>
     <color name="textbackground">#99AAAB</color>
-    <color name="search">#A4B0BD</color>
+    <color name="white">#fff</color>
 </resources>

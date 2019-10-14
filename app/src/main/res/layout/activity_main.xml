@@ -4,13 +4,99 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/search"
+    android:background="#fff"
     tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:scrollbars="vertical" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:tint="#FFF"
+        android:visibility="gone"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.929"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.812"
+        app:srcCompat="@drawable/ic_assignment_black_24dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/speech"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:tint="#FFF"
+        android:visibility="gone"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.715"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.835"
+        app:srcCompat="@drawable/ic_mic_none_black_24dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:tint="#FFF"
+        android:visibility="gone"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.661"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.958"
+        app:srcCompat="@drawable/ic_camera_alt_black_24dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:rotation="45"
+        android:tint="#FFF"
+        android:visibility="gone"
+        app:backgroundTint="@color/cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.928"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.959"
+        app:srcCompat="@android:drawable/ic_input_add" />
 
     <ImageButton
         android:id="@+id/navIcon"
-        android:layout_width="67dp"
-        android:layout_height="58dp"
+        android:layout_width="65dp"
+        android:layout_height="60dp"
         android:background="@drawable/ic_sort_black_24dp"
         android:contentDescription="@string/navigation"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -27,6 +113,7 @@
         android:ems="10"
         android:focusable="false"
         android:hint="@string/searchText"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:textAlignment="center"
         android:textSize="20sp"
@@ -34,8 +121,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.018"
-        android:importantForAutofill="no" />
+        app:layout_constraintVertical_bias="0.018" />
 
     <Button
         android:id="@+id/avatar"
@@ -49,10 +135,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.018" />
 
-
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/addIcon"
+        android:id="@+id/add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
@@ -65,48 +149,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.959"
-        app:srcCompat="@android:drawable/ic_input_add" />
-
-    <LinearLayout
-        android:layout_marginVertical="30dp"
-        android:id="@+id/listView"
-        android:layout_width="400dp"
-        android:layout_height="500dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/addIcon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/avatar">
-
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="20dp"
-            android:layout_marginHorizontal="30dp">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/label"
-                    android:layout_width="270dp"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/editdrawable"
-                    android:textSize="26sp" />
-
-                <TextView
-                    android:id="@+id/day"
-                    android:layout_width="69dp"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/editdrawable"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-        </com.google.android.material.card.MaterialCardView>
-
-    </LinearLayout>
+        app:srcCompat="@drawable/ic_add_black_24dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
