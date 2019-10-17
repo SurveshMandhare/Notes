@@ -3,7 +3,6 @@ package com.example.notes;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,16 +13,6 @@ import java.util.ArrayList;
 public class AdapterClass extends RecyclerView.Adapter<AdapterClass.ExampleViewHolder> {
 
     ArrayList<ArrayFormat> arrayList;
-
-    public class ExampleViewHolder extends RecyclerView.ViewHolder {
-        TextView mDate, mTitle;
-
-        public ExampleViewHolder(@NonNull View itemView) {
-            super(itemView);
-            this.mDate = itemView.findViewById(R.id.date);
-            this.mTitle = itemView.findViewById(R.id.title);
-        }
-    }
 
     public AdapterClass(ArrayList<ArrayFormat> exampleList) {
         this.arrayList = exampleList;
@@ -47,5 +36,15 @@ public class AdapterClass extends RecyclerView.Adapter<AdapterClass.ExampleViewH
     @Override
     public int getItemCount() {
         return arrayList.size();
+    }
+
+    public class ExampleViewHolder extends RecyclerView.ViewHolder {
+        TextView mDate, mTitle;
+
+        public ExampleViewHolder(@NonNull View itemView) {
+            super(itemView);
+            this.mDate = itemView.findViewById(R.id.date);
+            this.mTitle = itemView.findViewById(R.id.title);
+        }
     }
 }

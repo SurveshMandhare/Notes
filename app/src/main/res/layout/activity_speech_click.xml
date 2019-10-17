@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/textbackground"
+    tools:context=".speech_click">
+
+    <ImageView
+        android:id="@+id/play"
+        android:layout_width="129dp"
+        android:layout_height="82dp"
+        android:onClick="playIt"
+        app:layout_constraintBottom_toTopOf="@+id/dateText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TopicText"
+        app:layout_constraintVertical_bias="0.52"
+        app:srcCompat="@drawable/ic_mic_pink_24dp" />
+
+    <ImageView
+        android:id="@+id/pause"
+        android:layout_width="129dp"
+        android:layout_height="82dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/dateText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.343"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TopicText"
+        app:layout_constraintVertical_bias="0.52"
+        app:srcCompat="@drawable/ic_pause_circle_filled_black_24dp" />
+
+    <ImageView
+        android:id="@+id/stop"
+        android:layout_width="129dp"
+        android:layout_height="82dp"
+        android:onClick="stopIt"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/dateText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.656"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TopicText"
+        app:layout_constraintVertical_bias="0.52"
+        app:srcCompat="@drawable/ic_stop_black_24dp" />
+
+    <EditText
+        android:id="@+id/TopicText"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:background="@drawable/editdrawable"
+        android:ems="10"
+        android:hint="@string/topic"
+        android:inputType="textPersonName"
+        android:textFontWeight="500"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.122" />
+
+    <TextView
+        android:id="@+id/dateText"
+        android:layout_width="261dp"
+        android:layout_height="66dp"
+        android:ems="10"
+        android:focusable="true"
+        android:gravity="center_horizontal|center_vertical"
+        android:inputType="date"
+        android:text="Set Date"
+        android:textFontWeight="500"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.73" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="done"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.928"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.959"
+        app:srcCompat="@android:drawable/ic_menu_send" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

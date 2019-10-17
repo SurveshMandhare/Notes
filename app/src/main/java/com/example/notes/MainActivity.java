@@ -1,26 +1,21 @@
 package com.example.notes;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.Intent;
-import android.opengl.Visibility;
-import android.os.Bundle;
-import android.os.Handler;
-import android.view.View;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    private FloatingActionButton add, text, speech, camera, cancel;
     ArrayList<ArrayFormat> exampleList;
     String day, title;
+    private FloatingActionButton add, text, speech, camera, cancel;
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
@@ -43,9 +38,27 @@ public class MainActivity extends AppCompatActivity {
                 text.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Intent f2s = new Intent(MainActivity.this, text_click.class);
-                        f2s.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        startActivity(f2s);
+                        Intent f2text = new Intent(MainActivity.this, text_click.class);
+                        f2text.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(f2text);
+                    }
+                });
+
+                speech.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent f2speech = new Intent(MainActivity.this, speech_click.class);
+                        f2speech.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(f2speech);
+                    }
+                });
+
+                camera.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent f2camera = new Intent(MainActivity.this, camera_click.class);
+                        f2camera.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(f2camera);
                     }
                 });
 

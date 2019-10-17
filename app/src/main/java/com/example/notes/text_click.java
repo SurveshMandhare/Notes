@@ -1,7 +1,5 @@
 package com.example.notes;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
@@ -14,6 +12,8 @@ import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.TimePicker;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Calendar;
 
@@ -77,9 +77,9 @@ public class text_click extends AppCompatActivity {
         String myText = String.valueOf(topic.getText());
         String day = String.valueOf(days.getText());
 
-        if (TextUtils.isEmpty(myText)){
+        if (TextUtils.isEmpty(myText)) {
             topic.setError("Title is Empty!");
-        } else{
+        } else {
             t2f.putExtra("topic", myText);
             t2f.putExtra("day", day);
             startActivity(t2f);

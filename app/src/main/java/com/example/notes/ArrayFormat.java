@@ -1,7 +1,7 @@
 package com.example.notes;
 
 public class ArrayFormat {
-    private String date,title;
+    private String date, title;
 
     public ArrayFormat(String date, String title) {
         this.date = date;
